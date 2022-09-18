@@ -9,6 +9,7 @@ body {
 	margin: 0 auto;
 	min-height: 100vh;
 	display: none;
+	grid-template-rows: auto 1fr auto;
 }
 
 body.dark {

@@ -15,7 +15,7 @@
 		}
 	}
 
-	$: browser ? (document.body.style.display = 'block') : null;
+	$: browser ? (document.body.style.display = 'grid') : null;
 
 	onMount(() => {
 		schemeStore.subscribe((n) => {
