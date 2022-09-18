@@ -20,12 +20,11 @@
 		color: var(--text);
 	}
 	article {
-		padding: 1rem;
 		max-width: 35rem;
 	}
 	h1 {
-		font-size: 4rem;
-		margin-bottom: 0rem;
+		font-size: clamp(2.5rem, 10vw, 4rem);
+		margin-bottom: 1rem;
 		margin-top: 1.5rem;
 	}
 
@@ -35,6 +34,6 @@
 		margin-bottom: 2rem;
 	}
 	.md :global(p) {
-		font-size: 1.1rem;
+		font-size: 1rem;
 	}
 </style>

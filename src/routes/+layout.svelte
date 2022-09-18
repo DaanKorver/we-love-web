@@ -50,4 +50,10 @@
 	main {
 		padding: 1rem;
 	}
+
+	@media (min-width: 40rem) {
+		main {
+			padding: 2rem;
+		}
+	}
 </style>
