@@ -1,10 +1,9 @@
 import { writable, type Writable } from 'svelte/store';
 
 export interface PostMetadata {
-	author: string;
 	title: string;
 	description: string;
-	data: string;
+	date: string;
 }
 
 export interface Post {

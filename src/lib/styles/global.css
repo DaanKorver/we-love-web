@@ -1,0 +1,33 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--text);
+	max-width: 60rem;
+	margin: 0 auto;
+	min-height: 100vh;
+	display: none;
+}
+
+body.dark {
+	--background: #1a1a1a;
+	--text: #ffffff;
+	--grey: rgba(255, 255, 255, 0.5);
+	--accent: burlywood;
+}
+
+body {
+	--background: #fafafa;
+	--text: #000000;
+	--grey: rgba(0, 0, 0, 0.5);
+	--accent: saddlebrown;
+}
+
+@media (min-width: 60rem) {
+	body {
+		border-left: 1px solid var(--accent);
+		border-right: 1px solid var(--accent);
+	}
+}
