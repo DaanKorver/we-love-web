@@ -6,8 +6,12 @@
 	import { browser } from '$app/environment';
 
 	import { onMount } from 'svelte';
+	import PageTransition from '$lib/components/PageTransition.svelte';
+	import type { LayoutData } from './$types';
 
 	let scheme: string = 'dark';
+
+	export let data: LayoutData;
 
 	$: {
 		if (browser) {
@@ -40,11 +44,13 @@
 	});
 </script>
 
-<Header />
-<main>
-	<slot />
-</main>
-<Footer />
+<PageTransition key={data.url}>
+	<Header />
+	<main>
+		<slot />
+	</main>
+	<Footer />
+</PageTransition>
 
 <style>
 	@media (min-width: 40rem) {

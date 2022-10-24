@@ -4,13 +4,17 @@
 
 body {
 	background-color: var(--background);
+	font-family: 'Inter', 'sans-serif';
+	overflow: hidden;
+}
+
+body > div {
 	color: var(--text);
 	max-width: 70rem;
 	margin: 0 auto;
 	min-height: 100vh;
-	display: none;
+	display: grid;
 	grid-template-rows: auto 1fr auto;
-	font-family: 'Inter', 'sans-serif';
 }
 
 body.dark {

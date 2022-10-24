@@ -1,7 +1,7 @@
 import type { LayoutLoad } from './$types';
 import { posts as postStore } from '$lib/state/posts';
 
-export const load: LayoutLoad = async () => {
+export const load: LayoutLoad = async ({ url }) => {
 	const posts = await Promise.all(
 		Object.entries(import.meta.glob('$lib/posts/*.md')).map(async ([path, post]: [string, any]) => {
 			const slug: string = path.replace('/src/lib/posts/', '').slice(0, -3);
@@ -13,5 +13,7 @@ export const load: LayoutLoad = async () => {
 
 	postStore.set(posts);
 
-	return null;
+	return {
+		url: url.pathname
+	};
 };
