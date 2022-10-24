@@ -3,25 +3,32 @@
 
 	export let data: PageData;
 
-	const { title, content, date } = data;
+	const { title, content, date, image, description } = data;
 </script>
 
 <article>
-	<a href="/">Terug</a>
-	<h1>{title}</h1>
 	<date>{date}</date>
+	<img src={image} alt={title} />
+	<h1>{title}</h1>
+	<p>{description}</p>
 	<div class="md">
 		<svelte:component this={content} class="md" />
 	</div>
 </article>
 
 <style>
-	a {
-		color: var(--text);
+	img {
+		width: 100%;
+		height: 20rem;
+		object-fit: cover;
+		object-position: center;
 	}
+
 	article {
 		max-width: 35rem;
+		margin: 0 auto;
 	}
+
 	h1 {
 		font-size: clamp(2.5rem, 10vw, 4rem);
 		margin-bottom: 1rem;
@@ -31,8 +38,17 @@
 	date {
 		color: var(--grey);
 		display: block;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 	}
+
+	p {
+		font-style: italic;
+	}
+
+	.md {
+		padding-top: 1rem;
+	}
+
 	.md :global(p) {
 		font-size: 1rem;
 	}

@@ -5,30 +5,26 @@
 body {
 	background-color: var(--background);
 	color: var(--text);
-	max-width: 60rem;
+	max-width: 70rem;
 	margin: 0 auto;
 	min-height: 100vh;
 	display: none;
 	grid-template-rows: auto 1fr auto;
+	font-family: 'Inter', 'sans-serif';
 }
 
 body.dark {
 	--background: #1a1a1a;
+	--lighter: rgba(35, 35, 35);
 	--text: #ffffff;
 	--grey: rgba(255, 255, 255, 0.5);
-	--accent: burlywood;
+	--accent: rgb(255, 172, 214);
 }
 
 body {
 	--background: #fafafa;
+	--lighter: rgb(235, 235, 235);
 	--text: #000000;
 	--grey: rgba(0, 0, 0, 0.5);
-	--accent: saddlebrown;
-}
-
-@media (min-width: 60rem) {
-	body {
-		border-left: 1px solid var(--accent);
-		border-right: 1px solid var(--accent);
-	}
+	--accent: rgb(255, 172, 214);
 }
