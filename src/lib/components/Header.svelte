@@ -59,7 +59,7 @@
 		gap: 1.5rem;
 		padding: 0;
 		margin: 0;
-		padding: 1rem;
+		padding: 2rem;
 	}
 
 	a {
@@ -78,5 +78,12 @@
 		background-color: transparent;
 		color: var(--text);
 		border: none;
+		cursor: pointer;
+	}
+
+	@media (max-width: 40rem) {
+		ul {
+			padding: 1rem;
+		}
 	}
 </style>
