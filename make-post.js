@@ -5,7 +5,7 @@ const title = process.argv[3];
 const date = new Date();
 
 const currentDate = `${date.getUTCDate()}-${
-	date.getUTCMonth() <= 9 ? '0' + date.getUTCMonth() : date.getUTCMonth()
+	date.getUTCMonth() + 1 <= 9 ? '0' + date.getUTCMonth() : date.getUTCMonth() + 1
 }-${date.getUTCFullYear()}`;
 
 const template = `---

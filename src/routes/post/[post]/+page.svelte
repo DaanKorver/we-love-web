@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ReadLength from '$lib/components/ReadLength.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -6,6 +7,7 @@
 	const { title, content, date, image, description } = data;
 </script>
 
+<ReadLength />
 <article>
 	<date>{date}</date>
 	<img src={image} alt={title} />
@@ -50,6 +52,10 @@
 	}
 
 	.md :global(p) {
-		font-size: 1rem;
+		font-size: 1.125rem;
+	}
+
+	.md :global(h2) {
+		font-size: 2rem;
 	}
 </style>
