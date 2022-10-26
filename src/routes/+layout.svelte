@@ -44,18 +44,8 @@
 	});
 </script>
 
+<Header />
 <PageTransition key={data.url}>
-	<Header />
-	<main>
-		<slot />
-	</main>
-	<Footer />
+	<slot />
 </PageTransition>
-
-<style>
-	@media (min-width: 40rem) {
-		main {
-			padding: 1rem;
-		}
-	}
-</style>
+<Footer />

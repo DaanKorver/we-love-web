@@ -5,21 +5,26 @@
 	export let key: string;
 
 	const duration = 400;
-	const height = 25;
+	const height = 20;
 </script>
 
 {#key key}
-	<div
-		in:fly={{ y: height, delay: duration, easing: quadInOut }}
-		out:fly={{ y: -height, duration: duration, easing: quadInOut }}
+	<main
+		in:fly={{ y: -height, delay: duration + 100, easing: quadInOut }}
+		out:fly={{ y: height, duration: duration, easing: quadInOut }}
 	>
 		<slot />
-	</div>
+	</main>
 {/key}
 
 <style>
-	div {
-		position: absolute;
-		inset: 0;
+	main {
+		padding: 2rem;
+	}
+
+	@media (max-width: 40rem) {
+		main {
+			padding: 1rem;
+		}
 	}
 </style>

@@ -17,16 +17,14 @@
 body {
 	background-color: var(--background);
 	font-family: 'Inter', 'sans-serif';
-	overflow: hidden;
-}
-
-body > div {
+	display: none;
 	color: var(--text);
 	max-width: 70rem;
 	margin: 0 auto;
 	min-height: 100vh;
-	display: grid;
 	grid-template-rows: auto 1fr auto;
+	overflow: auto;
+	overflow: overlay;
 }
 
 body.dark {
@@ -43,4 +41,16 @@ body {
 	--text: #000000;
 	--grey: rgba(0, 0, 0, 0.5);
 	--accent: rgb(255, 172, 214);
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--lighter);
 }
